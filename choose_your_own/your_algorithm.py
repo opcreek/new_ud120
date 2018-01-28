@@ -31,10 +31,13 @@ plt.show()
 ### your code here!  name your classifier object clf if you want the 
 ### visualization code (prettyPicture) to show you the decision boundary
 
+### Random Forest
 
+from sklearn.ensemble import RandomForestClassifier
+from sklearn.metrics import accuracy_score
 
-
-
+clf = RandomForestClassifier(max_depth=2, random_state=0)
+clf.fit(features_train, labels_train)
 
 
 
@@ -42,3 +45,9 @@ try:
     prettyPicture(clf, features_test, labels_test)
 except NameError:
     pass
+
+
+
+pred = clf.predict(features_test)
+
+print accuracy_score(pred, labels_test)
