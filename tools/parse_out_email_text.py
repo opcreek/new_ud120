@@ -33,10 +33,11 @@ def parseOutText(f):
         ### split the text string into individual words, stem each word,
         ### and append the stemmed word to words (make sure there's a single
         ### space between each stemmed word)
+        #stemmer = SnowballStemmer("english")
         
-
-
-
+        #for word in text_string.split():
+        #    w = stemmer.stem(word)
+        #    words = words + " " + w
 
     return words
 
