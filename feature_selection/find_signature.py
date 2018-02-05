@@ -48,4 +48,15 @@ pred = clf1.predict(features_test)
 
 acc = accuracy_score(labels_test, pred)
 
+print acc
+
+impt_feat = clf1.feature_importances_
+for index, feat in numpy.ndenumerate(impt_feat):
+    if feat > 0.2:
+        print index, feat
+
+
+feat_list = vectorizer.get_feature_names()
+#print feat_list[21323]
+
 
